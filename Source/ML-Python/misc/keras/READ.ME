@@ -1,0 +1,26 @@
+http://machinelearningmastery.com/introduction-python-deep-learning-library-keras/
+http://machinelearningmastery.com/python-ecosystem-machine-learning/
+
+$: sudo easy_install pip
+
+$: sudo pip install numpy
+$: sudo pip install scipy
+
+$: sudo pip install tensorflow --ignore-installed six // because six seems to be out of date as is causing problems
+or this:
+$: sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow_gpu-0.12.0rc0-py2-none-any.whl
+
+$: sudo pip install keras
+
+create .keras/keras.json ->
+{
+    "image_dim_ordering": "tf", 
+    "epsilon": 1e-07, 
+    "floatx": "float32", 
+    "backend": "tensorflow"
+}
+
+$: python -c "from keras import backend; print backend._BACKEND"
+
+if issues with mumpy try
+sudo easy_install numpy
